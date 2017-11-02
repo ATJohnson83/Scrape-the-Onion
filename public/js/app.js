@@ -29,6 +29,17 @@ $(document).on("click", ".onionart", function() {
     });
 });
 
+$(document).on("click", "#getarts", function() {
+  alert('click test');
+  $.ajax({
+    method: "GET",
+    url: "/scrape"
+  })
+    .done(function(data) {
+      console.log("scrape:" + data)
+  });
+});
+
 
 $(document).on("click", "#savenote", function() {
   var thisId = $(this).attr("data-id");
