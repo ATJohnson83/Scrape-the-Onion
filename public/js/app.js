@@ -30,13 +30,19 @@ $(document).on("click", ".onionart", function() {
 });
 
 $(document).on("click", "#getarts", function() {
-  alert('click test');
   $.ajax({
     method: "GET",
     url: "/scrape"
   })
     .done(function(data) {
       console.log("scrape:" + data)
+
+      $.getJSON("/articles", function(data) {
+        console.log("dbdata2:" + data);
+        for (var i = 0; i < data.length; i++) {
+          $("#articles").append("<div><h3>" + data[i].title + "</h3><a class='artlink' target='_blank' href=" + data[i].link + ">Read Article</a><a data-id='" + data[i]._id + "' href='#' class='onionart'>Write Note</a></div>");
+        }
+      });
   });
 });
 
