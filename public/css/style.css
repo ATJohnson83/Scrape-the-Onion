@@ -1,0 +1,40 @@
+body { 
+  background: url("http://cdn1.creativecirclemedia.com/pnjmagazines/original/1503585524_6667.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron{
+   background-color: rgba(50,50,50,.9);
+   color: white;
+}
+
+.panel{
+  background: none;
+}
+
+.panel-body{
+   background-color: rgba(50,50,50,.9);
+   color: white;
+}
+
+/*http://cdn1.creativecirclemedia.com/pnjmagazines/original/1503585524_6667.jpg*/
+
+.artlink, .onionart {
+  color: #337ab7;
+  margin: 20px;
+}
+
+.artlink:hover, .onionart:hover, .artlink:visited, .onionart:visited {
+  font-size: 130%;
+  text-decoration: none;
+  color: #337ab7;
+}
+
+#titleinput, #bodyinput {
+  margin: 5px;
+  color: black;
+  width: 100%;
+}
